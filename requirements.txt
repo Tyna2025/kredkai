@@ -1,0 +1,6 @@
+streamlit>=1.50
+openai>=2.0
+instructor
+pydantic>=2
+python-dotenv
+pillow
