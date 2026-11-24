@@ -1,0 +1,26 @@
+name: Budzik aplikacji (keep awake)
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"   # co 6 godzin
+  workflow_dispatch:         # ręczne uruchomienie
+
+env:
+  # Po wdrożeniu wpisz tu publiczny adres aplikacji, np. https://twoja-nazwa.streamlit.app
+  APP_URL: ""
+
+jobs:
+  wake:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Instalacja Playwright
+        run: |
+          pip install playwright
+          python -m playwright install --with-deps chromium
+      - name: Odwiedź aplikację
+        run: python scripts/keep_awake.py
