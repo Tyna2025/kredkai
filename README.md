@@ -1,5 +1,7 @@
 # 🖍️ KredkAI
 
+**👉 Działająca aplikacja: https://kredkai.streamlit.app**
+
 Aplikacja Streamlit, która tworzy kolorowanki do wydruku: z opisu tekstowego albo z wgranego zdjęcia, na trzech poziomach trudności.
 
 Projekt z kursu „Od zera do AI”, moduł 8 (`#projekt-app_coloring_books`).
